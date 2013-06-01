@@ -58,14 +58,6 @@ int i2c_write (int slaveaddr, int length, unsigned char *buffer){
 
 
 
-
-
-
-int t
-
-
-
-
 //---------------------------------------------------------------------------------------
 // Hauptprogramm
 int main()

@@ -79,12 +79,7 @@ long today(void)
    time_t tnow; 
    time(&tnow);
    tmnow = localtime(&tnow);
-                       
-   tag =tmnow->tm_mday; monat =tmnow-> tm_mon + 1; jahr = tmnow->tm_year + 1900;  // Zuweiseung des Datums 
-   printf(" Heute ist der %d.%d.%d \n ", tag, monat , jahr); 
-   
-   stunde = tmnow->tm_hour; minute = tmnow->tm_min; sekunde = tmnow->tm_sec; //Zuweisung der Uhrzeit
-   printf(" um: %d:%lf:%d \n\n ", stunde, minute, sekunde);
+                      
                     
    return 1;
 }
@@ -191,6 +186,7 @@ buffer[2]=SET_AZIMUTH;
 
 i2c_write(SLAVE_ADDRESS , I2C_BUFFER_SIZE , buffer);
 
+check = 0 ; 
 // Warte bis Motor an Position gefahren ist ! 
 while(buffer[1]!=CMD_TERMINATED)
 {i2c_read(SLAVE_ADDRESS , I2C_BUFFER_SIZE , buffer);

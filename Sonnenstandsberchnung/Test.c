@@ -6,6 +6,9 @@
 
 
 //----------------------- ---------------Präprozessor--------------------------------
+#include <linux/i2c-dev.h>
+#include <linux/i2c.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -33,6 +36,7 @@
 
 
 //I2C 
+#define SLAVE_ADDRESS 0x13
 #define I2C_DEV "/dev/i2c-1"  // Versionsabhaengig
 #define I2C_BUFFER_SIZE 4 // Number of Bytes 
 
